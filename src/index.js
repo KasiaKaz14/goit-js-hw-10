@@ -2,6 +2,7 @@ import { fetchBreeds, fetchCatByBreed, fetchImageCatByBreed } from './cat-api';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import SlimSelect from 'slim-select';
 import 'slim-select/dist/slimselect.css';
+import axios from 'axios';
 
 const refs = {
   selectCat: document.querySelector('.breed-select'),
