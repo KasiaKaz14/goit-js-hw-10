@@ -1,15 +1,7 @@
-import {
-  fetchBreeds,
-  fetchCatByBreed,
-  fetchCatImageByBreed,
-} from './cat-api.js';
-import axios from 'axios';
+import { fetchBreeds, fetchCatByBreed, fetchImageCatByBreed } from './cat-api';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import SlimSelect from 'slim-select';
 import 'slim-select/dist/slimselect.css';
-import Notiflix from 'notiflix';
-
-axios.defaults.headers.common['x-api-key'] =
-  'live_HA94c4HA4z3yemYLuwTWt7WgfNEmJ6TOB4WexcCWe5EGLcqxtztEra0GMQZVt72z';
 
 const refs = {
   selectCat: document.querySelector('.breed-select'),
@@ -73,11 +65,11 @@ function resetSectionUserChoiceCat() {
 
 function createMarkupUserChoiceCat(url) {
   refs.sectionUserChoiceCat.innerHTML = `<img src="${url}" alt="cat breed ${catDescription.breed} " width="300">
-     <div class="wrapper-description">
-       <h2 class="cat-info-title">${catDescription.breed}</h2>
-       <p class="cat-info-description">${catDescription.description}</p>
-       <p class="cat-info-haracteristic"><span class="cat-info-haracteristic-title">Temperament: </span>${catDescription.temperament}</p>
-     </div>`;
+   <div class="wrapper-description">
+     <h2 class="cat-title">${catDescription.breed}</h2>
+     <p class="cat-description">${catDescription.description}</p>
+     <p class="cat-temperament"><span class="cat-temperament-title">Temperament: </span>${catDescription.temperament}</p>
+   </div>`;
 }
 
 function createSelectorCat(arr) {
