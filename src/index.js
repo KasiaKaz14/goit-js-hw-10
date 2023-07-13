@@ -42,7 +42,7 @@ function createNewSlimSelect() {
   });
 }
 
-async function setChoiceCat(catId) {
+async function createSectionUserChoiceCat(catId) {
   try {
     const catByBreed = await fetchCatByBreed(catId);
     updatecatDescriptionObj(catByBreed);
@@ -54,7 +54,7 @@ async function setChoiceCat(catId) {
   }
 }
 
-function updatecatDescription(obj) {
+function updatecatDescriptionObj(obj) {
   catDescription.breed = obj.name;
   catDescription.description = obj.description;
   catDescription.temperament = obj.temperament;
