@@ -1,0 +1,41 @@
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.breed-select {
+  width: 250px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.cat-info {
+  display: flex;
+  column-gap: 30px;
+
+  justify-content: center;
+}
+
+.wrapper-description {
+  width: 500px;
+}
+
+.cat-info-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.cat-info-description {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.cat-info-haracteristic-title {
+  font-weight: bold;
+}
+
+.ss-main.breed-select {
+  width: 300px;
+}
